@@ -1,0 +1,69 @@
+== Enterprise Infrastructure, Tools and Tricks for Teams Developing Android Applications 
+
+Created by Manfred Moser of http://www.simpligility.com[simpligility
+technologies inc] 
+
+Presented at AnDevCon 5 in Boston, May 2013
+
+=== Abstract
+
+Have you been developing Android applications for a while? On your
+own? And there is just too much to do? Congratulations! But what next?
+Android application development is growing up, and larger and larger
+teams are working on multiple mobile applications. And these
+applications have to tie back into one or many server-side enterprise
+applications. The complexity of a typical Android application requires
+the use of a number of external libraries for interoperating with Web
+services and other systems; abstracting the Android API across
+platform versions; improving the performance or maintainability of the
+source code; and many more aspects. Learn about a number of great
+libraries available as open source, where to get them, and how to
+start including them into your application easily.
+
+As a next step, we will learn about repository management. Learn how
+to enjoy great build performance and stability, and how to gain access
+to an easy mechanism to distribute your own libraries and components
+internally as well as to partners and clients. Once you are using a
+repository manager, you will be able to easily distribute your
+applications across teams and potentially implement a multi-stage
+release process with notifications and rollbacks, if necessary.
+
+Using all these libraries brings tremendous benefits to you. It
+however also means that you are responsible for license compliance,
+and we will show you some accepted practices for ensuring that your
+applications comply. Unfortunately, these components can be affected
+by security issues as well. We will examine the ideas of Component
+Lifecycle Management, and check out some of the tools available to
+help you take control over potential security and license issues.
+
+Once your development efforts scale even further, you will need to
+examine your version-control system usage. We will look at a few
+practices for using branches effectively and ensuring that development
+efforts on multiple features integrate well. Adding a continuous
+integration server into your development infrastructure will allow you
+tie everything together.
+
+
+=== Tips for using
+
+The html file in the root folder is all you need to show the
+presentation.
+
+Just download the repo with git clone or as zip/tar.gz
+
+=== Modifications
+
+If you need to modify and rebuild the slides, modify the
+
+----
+src/enterprise-tools-tricks-android.asciidoc
+----
+
+and run
+
+----
+cd src
+./generate.sh 
+----
+
+asciidoc with slidy backend install required.

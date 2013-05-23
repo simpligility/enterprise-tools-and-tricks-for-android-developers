@@ -1,0 +1,49 @@
+= Enterprise Infrastructure, Tools and Tricks for Teams Developing Android Applications
+:author:    Manfred Moser, simpligility technologies inc.
+:backend:   slidy
+:max-width: 45em
+:data-uri:
+:icons:
+:toc!:
+:slidetitleindentcar: 
+:copyright: Copyright 2013, simpligility technologies inc., All Rights Reserved.
+
+
+== About Manfred Moser
+
+* Long time CI user and administrator
+
+* Author of The Hudson Book
+
+* Open source project manager ksoap2-android, Android Maven Plugin 
+
+* Presenter at various conferences AnDevCon, OSCON, JUC, ... 
+
+* Founder of VIJUG and GDG Victoria BC
+
+* Owner http://www.simpligility.com[simpligility technologies inc.]
+
+== Objectives
+
+* Understand the benefits of using a continuous integration servers
+
+* Options for deployment
+
+* Glance at different available CI servers and services
+
+* Getting started 
+
+* Android specific considerations
+
+
+== More Links
+
+
+
+
+== Whats Next? 
+
+- Fireside chat
+
+- Enterprise tooling presentation
+
