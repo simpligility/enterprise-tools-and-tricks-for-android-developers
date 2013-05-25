@@ -11,29 +11,162 @@
 
 == About Manfred Moser
 
-* Long time CI user and administrator
+* Runs his own little company http://www.simpligility.com[simpligility
+  technologies inc.]
 
-* Author of The Hudson Book
+* Worked at and helps companies between 2 and 2000 developers
 
-* Open source project manager ksoap2-android, Android Maven Plugin 
+* Developer and system administrator with long (> 10years) interest in
+  development tooling
+
+* Open source project lead https://code.google.com/p/ksoap2-android/[ksoap2-android], https://code.google.com/p/maven-android-plugin/[Android Maven Plugin]
+
+* Author of multiple books (Nexus, Maven, Hudson, CLM)
 
 * Presenter at various conferences AnDevCon, OSCON, JUC, ... 
 
-* Founder of VIJUG and GDG Victoria BC
-
-* Owner http://www.simpligility.com[simpligility technologies inc.]
+* Founder of http://www.mosabuam.com/vijug/blog/[VIJUG] and https://plus.google.com/112826376355061333205/posts[GDG Victoria BC]
 
 == Objectives
 
-* Understand the benefits of using a continuous integration servers
+* What tools to look at when growing
 
-* Options for deployment
+* Find out about some great libraries and tools
 
-* Glance at different available CI servers and services
+* 
 
-* Getting started 
 
-* Android specific considerations
+Have you been developing Android applications for a while? On your
+own? And there is just too much to do? Congratulations! But what next?
+Android application development is growing up, and larger and larger
+teams are working on multiple mobile applications. And these
+applications have to tie back into one or many server-side enterprise
+applications. The complexity of a typical Android application requires
+the use of a number of external libraries for interoperating with Web
+services and other systems; abstracting the Android API across
+platform versions; improving the performance or maintainability of the
+source code; and many more aspects. Learn about a number of great
+libraries available as open source, where to get them, and how to
+start including them into your application easily.
+
+As a next step, we will learn about repository management. Learn how
+to enjoy great build performance and stability, and how to gain access
+to an easy mechanism to distribute your own libraries and components
+internally as well as to partners and clients. Once you are using a
+repository manager, you will be able to easily distribute your
+applications across teams and potentially implement a multi-stage
+release process with notifications and rollbacks, if necessary.
+
+Using all these libraries brings tremendous benefits to you. It
+however also means that you are responsible for license compliance,
+and we will show you some accepted practices for ensuring that your
+applications comply. Unfortunately, these components can be affected
+by security issues as well. We will examine the ideas of Component
+Lifecycle Management, and check out some of the tools available to
+help you take control over potential security and license issues.
+
+Once your development efforts scale even further, you will need to
+examine your version-control system usage. We will look at a few
+practices for using branches effectively and ensuring that development
+efforts on multiple features integrate well. Adding a continuous
+integration server into your development infrastructure will allow you
+tie everything together.
+
+== Your Organisation is Growing
+
+What to consider and think about ..
+
+* distributed company? 
+
+** affects culture of communication and interaction
+
+** wider choice of people
+
+** virtual infrastructure
+
+
+
+* what is your core compentency
+
+** if it is not website creation - dont start coding your own
+
+** same for book keeping, marketing, HR and so on
+
+** but in the beginning you will have to do lots of different things yourself
+
+
+
+== Tools You Will Need
+
+Beyond development that affect development
+
+* Customer Relationship Management (goes beyond using the play
+  console) - 
+
+* Website - part might have to be embedded in your application
+
+* User interaction tools like forums, mailing lists, support systems,
+  issue tracker
+
+* Bookkeeping 
+
+
+== Development Tools You Will Need
+
+Directly used by development
+
+* Issue tracker
+ 
+** for internal and customer usage
+
+* Version control system
+
+== Development Tools You Might Want
+
+* Continuous Integration Server
+
+* Repository Manager
+
+* Component Lifecycle Management tool
+
+** for security and license analysis
+
+* Quality Metrics and Analysis
+ 
+* Testing Facilities
+
+== Used to be like this
+
+simple app, no libraries used
+
+no server backend
+
+== And now
+
+multiple complex apps
+
+using external libraries
+
+and internal libraries
+
+and 
+== Version Control Systems
+
+
+== Code Review System
+
+== Continuous Integration
+
+
+== Repository Management
+
+
+== Issue Tracking
+
+
+== Component Lifecycle Managment
+
+
 
 
 == More Links
@@ -43,7 +176,8 @@
 
 == Whats Next? 
 
-- Fireside chat
+- Fireside chat - Wednesday, May 29, 7:30-9:30 PM
 
-- Enterprise tooling presentation
+- Introduction to Continuous Integration Server Usage Focusing on
+  Android Development  - Friday, May 31, 8:30-9:45 AM
 
