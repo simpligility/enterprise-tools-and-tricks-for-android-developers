@@ -72,7 +72,71 @@ efforts on multiple features integrate well. Adding a continuous
 integration server into your development infrastructure will allow you
 tie everything together.
 
-== Your Organisation is Growing
+== What is Our Scenario? 
+
+You are somewhere along the path from 
+
+* a small company
+
+** one or two up to a handful of people
+
+* with a successful app
+
+* and maybe a server side backend
+
+to
+
+* a larger company
+
+* with multiple applications
+
+* and a large server backend system  
+
+IMPORTANT: Congratulations! You will see, it is an exciting ride!
+
+== What We Will NOT Talk About...
+
+Growing a company means that you have dedicated people for things like
+
+* Finance
+
+* HR
+
+* Sales
+
+* Marketing
+
+* ...
+
+but we will not cover all those aspects. 
+
+== What We Will Talk About...
+
+Growing a software development team means things like
+
+* more specialization 
+
+** dedicated QA
+
+** dedicated backend developers
+
+** dedicated app developers (per platform potentially)
+
+** and yes, dedicated managers (or at least people with part time
+   management duties() 
+
+* more formalization of procedures, hopefully agile!
+
+** XP, SCRUM, Kanban
+
+** hopefully not waterfall...
+
+* more *development infrastructure and tooling*
+
+** this will be our focus
+
+
+== Big Picture Things to Consider
 
 What to consider and think about ..
 
@@ -84,16 +148,88 @@ What to consider and think about ..
 
 ** virtual infrastructure
 
-
-
 * what is your core compentency
 
-** if it is not website creation - dont start coding your own
+** if it is not website creation - don't start coding your own
 
 ** same for book keeping, marketing, HR and so on
 
-** but in the beginning you will have to do lots of different things yourself
+** but in the beginning you will have to do lots of different things
+   yourself
 
+TIP: Choose wisely what you take care of yourself and what you pay
+others to do for you!
+
+== Simple App Development 
+
+used to be like this:: 
+
+* simple codebase
+
+* one project
+
+* Eclipse used to build and release app on developer machine
+
+* manual QA
+
+* manual upload to app store
+
+* application not internatioalized (i18n)
+
+* no server backend system integrated
+
+== Complex App Development - Codebase
+
+* Complex app code
+
+* multiple external libraries (components) 
+
+* multiple internal compornents used
+
+* components used across server backend and mobile app
+
+* Multiple apps
+
+== Complex App Development - Building
+
+* Eclipse, Intellij and others used by developers
+
+* Command line build becomes important
+
+* Release build on "build machine" -> Continuous integration server usage
+
+
+== Complex App Development - Building
+
+
+With all these complexities, how can you manage all that
+
+* Formalization and Standarization of Procedures
+
+* Tooling
+
+
+== Formalization of Procedures
+
+* IT is very fast paced.
+
+* Mobile is even faster.
+
+* You have to keep up to compete
+
+->  You have to use some sort of agile process
+
+== We Don't Need "Agile"!
+
+Typically in 
+
+* regulated sectors like health, 
+
+* government 
+
+* or other slower market
+
+->Using agile methodologies will give you an edge over your competitors
 
 
 == Tools You Will Need
@@ -135,21 +271,6 @@ Directly used by development
  
 * Testing Facilities
 
-== Used to be like this
-
-simple app, no libraries used
-
-no server backend
-
-== And now
-
-multiple complex apps
-
-using external libraries
-
-and internal libraries
-
-and 
 == Version Control Systems
 
 
@@ -169,6 +290,8 @@ and
 
 
 
+
+
 == More Links
 
 
@@ -176,8 +299,16 @@ and
 
 == Whats Next? 
 
-- Fireside chat - Wednesday, May 29, 7:30-9:30 PM
+* Fireside chat about growing up
 
-- Introduction to Continuous Integration Server Usage Focusing on
-  Android Development  - Friday, May 31, 8:30-9:45 AM
+** Wednesday, May 29, 7:30-9:30 PM
+
+** With Robert Green, Jake Wharton, Mike Wolfson and others
+
+** Ask questions and get tips and tricks from the pros!
+
+* Introduction to Continuous Integration Server Usage Focusing on
+  Android Development  
+
+** Friday, May 31, 8:30-9:45 AM
 
