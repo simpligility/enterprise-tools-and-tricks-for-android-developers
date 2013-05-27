@@ -100,15 +100,15 @@ to
 
 == What We *Will Not* Talk About...
 
-Growing a company means that you have dedicated people for things like
+Growing a company means, that you have dedicated people and tools for things like
 
-* Finance
+* finance
 
-* HR
+* human resources 
 
-* Sales
+* sales
 
-* Marketing
+* marketing
 
 * ...
 
@@ -116,7 +116,7 @@ but we will *not* cover all those aspects.
 
 == What We *Will* Talk About...
 
-Growing a software development team means things like
+Growing a *software development team* means things like
 
 * more specialization 
 
@@ -129,9 +129,9 @@ Growing a software development team means things like
 ** and yes, dedicated managers (or at least people with part time
    management duties) 
 
-* more formalization of procedures, hopefully agile!
+* more formalization of procedures
 
-** XP, SCRUM, Kanban
+** agile methodologies e.g. XP, SCRUM, Kanban
 
 ** hopefully not waterfall...
 
@@ -154,34 +154,40 @@ There are a lot of other aspects..
 
 * which makes it harder to change
 
-== Big Picture Things to Consider
+== Big Picture Things to Consider - Distributed Company
 
-What to consider and think about ..
+Are you running a distributed company? 
 
-* Distributed company? 
+* might only mean that people are allowed to work from home once a
+   week
 
-** affects culture of communication and interaction
+* affects culture of communication and interaction
 
-** wider choice of people
+* wider choice of people - the whole world potentially
 
-** virtual infrastructure
+* virtual infrastructure
 
-* What is your core competency?
 
-** if it is not website creation - don't start coding your own
+== Big Picture Things to Consider - Core Competency
 
-** same for finance, marketing, HR and so on
+What is your core competency?
 
-** but in the beginning you will have to do lots of different things
+* if it is not website creation - don't start coding your own
+
+* same for finance, marketing, HR and so on
+
+* but in the beginning you will have to do lots of different things
    yourself
 
-** and when you are very large you might want to control some of them
+* and when you are very large you might want to control some of them
 
 TIP: Choose wisely what you take care of yourself, and what you pay
 others to do for you!
 
 
-== Let's move on to
+== But Thats Enough High Level
+
+Let's move on to
 
 *Software Development*
 
@@ -191,7 +197,7 @@ and
 
 == Simple App Development 
 
-Used to be like this:: 
+Used to be like this...
 
 * simple codebase
 
@@ -234,6 +240,8 @@ And now...
 
 * Command line build becomes important
 
+** Apache Ant, make, Gradle, Apache Maven
+
 * Release build on "build machine" -> Continuous integration server usage
 
 
@@ -243,7 +251,13 @@ Now a lot more people are involved
 
 * developers
 
+** write and test code
+
 * testers
+
+** write test code and run it 
+
+** and do explorative testing
 
 * managers
 
@@ -253,9 +267,14 @@ Now a lot more people are involved
 
 ** don't forget documentation!
 
+TIP: There will be other specialized roles like build master, release
+manager and many more.  
+
 == Complex App Development - How? 
 
-*With all these complexities, how can you manage all that?*
+With all these complexities..
+
+*How can you manage all that?*
 
 * formalization and standarization of procedures
 
@@ -268,9 +287,11 @@ Now a lot more people are involved
 
 * rampant choice and therefore complexity
 
-* no testing
+* potentially no testing
 
 * ad hoc deployments to production
+
+* large difference between code style and patterns across code base
 
 * fixing things right in prodcution 
 
@@ -283,6 +304,8 @@ Now a lot more people are involved
 * provide stability for users and yourself
 
 * easier for new people as well 
+
+* keep code base maintainable
 
 * produce higher quality apps
 
@@ -299,11 +322,14 @@ Now a lot more people are involved
 
 ->  You have to use some sort of agile process
 
+TIP: Try for some http://www.simpligility.com[simpligility] -
+simplicity and agility combined l  image:images/emoticons/wink.png[scale=100]
+
 == We Don't Need "Agile"!
 
 Often a sentiment found typically in 
 
-* regulated sectors like health
+* heavily regulated sectors like health, ..
 
 * government 
 
@@ -318,11 +344,13 @@ Just some quick tips
 
 * Don't be religious about following one method
 
-* Don't buy into the money milking machine
+* Don't buy into the money milking machine of endless consulting and certifications
 
 * But get help to find your own way
 
 * Make it part of the company culture
+
+* Be prepared... it won't be easy! But it will be worth it.
 
 IMPORTANT: A lot of this should be common sense.
 
