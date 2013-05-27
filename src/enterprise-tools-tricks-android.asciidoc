@@ -14,14 +14,14 @@
 * Runs his own little company http://www.simpligility.com[simpligility
   technologies inc.]
 
-* Worked at and helps companies between 2 and 2000 developers
+* Worked at and helps companies between 2 and 2000+ developers
 
-* Developer and system administrator with long (> 10years) interest in
+* Developer and system administrator with long (> 10 years) interest in
   development tooling
 
 * Open source project lead https://code.google.com/p/ksoap2-android/[ksoap2-android], https://code.google.com/p/maven-android-plugin/[Android Maven Plugin]
 
-* Author of multiple books (Nexus, Maven, Hudson, CLM)
+* Author of multiple books (Nexus, Hudson, Maven, Sonatype CLM)
 
 * Presenter at various conferences AnDevCon, OSCON, JUC, ... 
 
@@ -78,7 +78,7 @@ You are somewhere along the path from
 
 * a small company
 
-** one or two up to a handful of people
+** one or two, up to a handful of people
 
 * with a successful app
 
@@ -123,7 +123,7 @@ Growing a software development team means things like
 ** dedicated app developers (per platform potentially)
 
 ** and yes, dedicated managers (or at least people with part time
-   management duties() 
+   management duties) 
 
 * more formalization of procedures, hopefully agile!
 
@@ -131,16 +131,30 @@ Growing a software development team means things like
 
 ** hopefully not waterfall...
 
+** there is an entire industry around for that stuff, be careful
+
 * more *development infrastructure and tooling*
 
 ** this will be our focus
 
+** so more details coming later ;-) 
+
+
+== Big Picture Things to Consider
+
+There are lot of other aspects.. 
+
+* I found these to be often overlooked or merely evolving 
+
+* rather than being a conscious decision 
+
+* which makes it harder
 
 == Big Picture Things to Consider
 
 What to consider and think about ..
 
-* distributed company? 
+* Distributed company? 
 
 ** affects culture of communication and interaction
 
@@ -148,21 +162,32 @@ What to consider and think about ..
 
 ** virtual infrastructure
 
-* what is your core compentency
+* What is your core compentency?
 
 ** if it is not website creation - don't start coding your own
 
-** same for book keeping, marketing, HR and so on
+** same for finance, marketing, HR and so on
 
 ** but in the beginning you will have to do lots of different things
    yourself
 
+** and when you are very large you might want to control some of them
+
 TIP: Choose wisely what you take care of yourself and what you pay
 others to do for you!
 
+
+== Let's move on to
+
+* Software Development 
+
+and 
+
+* Related Tooling
+
 == Simple App Development 
 
-used to be like this:: 
+Used to be like this:: 
 
 * simple codebase
 
@@ -179,6 +204,8 @@ used to be like this::
 * no server backend system integrated
 
 == Complex App Development - Codebase
+
+And now...
 
 * Complex app code
 
@@ -199,8 +226,19 @@ used to be like this::
 * Release build on "build machine" -> Continuous integration server usage
 
 
-== Complex App Development - Building
+== Complex App Development - People
 
+Now a lot more people are involved
+
+* developers
+
+* testers
+
+* managers
+
+* writers
+
+** don't forget documentation!
 
 With all these complexities, how can you manage all that
 
@@ -210,6 +248,26 @@ With all these complexities, how can you manage all that
 
 
 == Formalization of Procedures
+
+* Cowboy coding, 
+
+* No testing
+
+* Ad hoc deployments to production or
+
+* Fixing things right in prodcution 
+
+-> These things do not fly anymore --  the stakes are too high
+
+Need some sort of process
+
+* avoid communication issues and other friction
+
+* provide stability for users and yourself
+
+* easier for new people as well 
+
+== Formalization of Procedures - Agile 
 
 * IT is very fast paced.
 
@@ -232,20 +290,22 @@ Typically in
 ->Using agile methodologies will give you an edge over your competitors
 
 
-== Tools You Will Need
+== Tools Beyond Development 
 
-Beyond development that affect development
+You Will Need these to some extent and they do affect development::
 
 * Customer Relationship Management (goes beyond using the play
-  console) - 
+  console)
 
-* Website - part might have to be embedded in your application
+* Website - parts might have to be embedded in your application
 
 * User interaction tools like forums, mailing lists, support systems,
   issue tracker
 
-* Bookkeeping 
+* Bookkeeping - order management, in app payments integration
 
+TIP: You might have to integrate with or use them, but we will not
+focus on these.
 
 == Development Tools You Will Need
 
@@ -256,6 +316,10 @@ Directly used by development
 ** for internal and customer usage
 
 * Version control system
+
+** distributed or centralized
+
+IMPORTANT: Imho these are a *must have*!  
 
 == Development Tools You Might Want
 
@@ -269,7 +333,53 @@ Directly used by development
 
 * Quality Metrics and Analysis
  
-* Testing Facilities
+* Testing Facilities and Tools
+
+IMPORTANT: Which are a must have will depend on who you ask...
+
+
+== Tooling Infrastructure
+
+in the cloud or not? 
+
+
+== Before We Look At The Tools In Detail
+
+let's look at the apps and components 
+
+add slides about 
+
+Eclipse build
+
+Ant
+
+Maven
+
+Gradle
+
+APKLIB
+
+AAR
+
+Android Specific Examples
+
+RoboGuice
+
+ActionBarSherlock
+
+Spoon
+
+Otto
+
+GreenDroid
+
+Appium 
+
+Robotium
+
+...
+
+== Issue Tracking
 
 == Version Control Systems
 
@@ -282,7 +392,7 @@ Directly used by development
 == Repository Management
 
 
-== Issue Tracking
+
 
 
 == Component Lifecycle Managment
@@ -310,5 +420,5 @@ Directly used by development
 * Introduction to Continuous Integration Server Usage Focusing on
   Android Development  
 
-** Friday, May 31, 8:30-9:45 AM
+** ./Friday, May 31, 8:30-9:45 AM
 
