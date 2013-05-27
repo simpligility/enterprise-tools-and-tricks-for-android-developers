@@ -177,7 +177,7 @@ What to consider and think about ..
 
 ** and when you are very large you might want to control some of them
 
-TIP: Choose wisely what you take care of yourself and what you pay
+TIP: Choose wisely what you take care of yourself, and what you pay
 others to do for you!
 
 
@@ -203,15 +203,17 @@ Used to be like this::
 
 * manual upload to app store
 
-* application not internatioalized (i18n)
+* application not internationalized (i18n)
 
 * no server backend system integrated
+
+* one target form factor (phone)
 
 == Complex App Development - Codebase
 
 And now...
 
-* Complex app code
+* complex app code
 
 * multiple external libraries (components) 
 
@@ -219,7 +221,12 @@ And now...
 
 * components used across server backend and mobile app
 
-* Multiple apps
+* multiple apps
+
+* multiple target form factors
+
+** phone, tablet, TV, desktop and others
+ 
 
 == Complex App Development - Building
 
