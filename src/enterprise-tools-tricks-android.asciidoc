@@ -6,7 +6,7 @@
 :icons:
 :toc!:
 :slidetitleindentcar: 
-:copyright: Copyright 2013, simpligility technologies inc., All Rights Reserved.
+:copyright: 2013, simpligility technologies inc., CreativeCommons Attribution-Noncommercial-No Derivative Works 3.0(http://creativecommons.org/licenses/by-nc-nd/3.0/us)
 
 
 == About Manfred Moser
@@ -88,13 +88,17 @@ to
 
 * a larger company
 
+** dozens to thousands of people
+
 * with multiple applications
+
+** probably on multiple platforms
 
 * and a large server backend system  
 
-IMPORTANT: Congratulations! You will see, it is an exciting ride!
+*Congratulations! You will see, it is an exciting ride!*
 
-== What We Will NOT Talk About...
+== What We *Will Not* Talk About...
 
 Growing a company means that you have dedicated people for things like
 
@@ -108,9 +112,9 @@ Growing a company means that you have dedicated people for things like
 
 * ...
 
-but we will not cover all those aspects. 
+but we will *not* cover all those aspects. 
 
-== What We Will Talk About...
+== What We *Will* Talk About...
 
 Growing a software development team means things like
 
@@ -131,13 +135,13 @@ Growing a software development team means things like
 
 ** hopefully not waterfall...
 
-** there is an entire industry around for that stuff, be careful
+** there is an entire industry around for that stuff -> be careful
 
 * more *development infrastructure and tooling*
 
 ** this will be our focus
 
-** so more details coming later ;-) 
+** so more details coming later  image:images/emoticons/wink.png[scale=100]
 
 
 == Big Picture Things to Consider
@@ -179,11 +183,11 @@ others to do for you!
 
 == Let's move on to
 
-* Software Development 
+*Software Development*
 
 and 
 
-* Related Tooling
+*Related Tooling*
 
 == Simple App Development 
 
@@ -235,6 +239,8 @@ Now a lot more people are involved
 * testers
 
 * managers
+
+** unavoidable, but stay nimble
 
 * writers
 
@@ -292,12 +298,15 @@ Typically in
 
 == Tools Beyond Development 
 
-You Will Need these to some extent and they do affect development::
+You will need these to some extent and they do affect development::
 
-* Customer Relationship Management (goes beyond using the play
-  console)
+* Customer Relationship Management 
 
-* Website - parts might have to be embedded in your application
+** goes beyond using the play console
+
+* Website
+
+** parts might have to be embedded in your application
 
 * User interaction tools like forums, mailing lists, support systems,
   issue tracker
@@ -323,24 +332,77 @@ IMPORTANT: Imho these are a *must have*!
 
 == Development Tools You Might Want
 
+For you development you might want
+
+* Build system
+
+** to be able to automate your build
+
+* Quality Metrics and Analysis Tools
+
+** taking care of your own code
+
+* Testing Facilities and Tools
+
+** making sure code does what it is intended to
+
 * Continuous Integration Server
+
+** making sure things work all the time
 
 * Repository Manager
 
-* Component Lifecycle Management tool
+** store all your components used
 
-** for security and license analysis
+** provide build performance and stability
 
-* Quality Metrics and Analysis
- 
-* Testing Facilities and Tools
+* Component Lifecycle Management
 
-IMPORTANT: Which are a must have will depend on who you ask...
+** for security and license analysis and monitoring of components
 
+IMPORTANT: Which are a must have will depend on who you ask, but imho
+you need them all  image:images/emoticons/wink.png[scale=100]
+
+
+== Tooling
+
+Get something off the shelf or write your own? 
+
+* Do NOT reinvent the wheel, just because you can
+
+* These system are all simple, but only on the surface!
+
+* Maybe write some glue code for integrating different systems
+
+* Focus on your business, not your tools!
 
 == Tooling Infrastructure
 
-in the cloud or not? 
+Where and who to run it all?
+
+* Depends on the company structure
+
+** distributed or not, how many locations...
+
+* Who controls hardware
+
+** you might need access e.g. for attaching hardware devices
+
+* Where is it located 
+
+** your own datacenter
+
+** provider
+
+** potentially legal restrictions for location (
+
+* Saas, Paas or DIY
+
+** Software as a Service
+
+** Platform as a Service
+
+** Do it yourself
 
 
 == Before We Look At The Tools In Detail
@@ -391,7 +453,9 @@ Robotium
 
 == Repository Management
 
+== Repository Manager as Center Hub
 
+image::images/nexus-tool-suite-integration.png[scale=100]
 
 
 
