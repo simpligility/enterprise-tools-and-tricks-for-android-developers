@@ -146,13 +146,13 @@ Growing a software development team means things like
 
 == Big Picture Things to Consider
 
-There are lot of other aspects.. 
+There are a lot of other aspects.. 
 
-* I found these to be often overlooked or merely evolving 
+* I found the following to be often overlooked or merely evolving 
 
 * rather than being a conscious decision 
 
-* which makes it harder
+* which makes it harder to change
 
 == Big Picture Things to Consider
 
@@ -166,7 +166,7 @@ What to consider and think about ..
 
 ** virtual infrastructure
 
-* What is your core compentency?
+* What is your core competency?
 
 ** if it is not website creation - don't start coding your own
 
@@ -253,32 +253,41 @@ Now a lot more people are involved
 
 ** don't forget documentation!
 
-With all these complexities, how can you manage all that
+== Complex App Development - How? 
 
-* Formalization and Standarization of Procedures
+*With all these complexities, how can you manage all that?*
 
-* Tooling
+* formalization and standarization of procedures
+
+* tooling
 
 
-== Formalization of Procedures
+== Formalization of Procedures - The Problem
 
-* Cowboy coding, 
+* cowboy coding
 
-* No testing
+* rampant choice and therefore complexity
 
-* Ad hoc deployments to production or
+* no testing
 
-* Fixing things right in prodcution 
+* ad hoc deployments to production
+
+* fixing things right in prodcution 
 
 -> These things do not fly anymore --  the stakes are too high
 
-Need some sort of process
+== Formalization of Procedures - The Benefits
 
 * avoid communication issues and other friction
 
 * provide stability for users and yourself
 
 * easier for new people as well 
+
+* produce higher quality apps
+
+* avoid huge costs of failure
+
 
 == Formalization of Procedures - Agile 
 
@@ -292,20 +301,35 @@ Need some sort of process
 
 == We Don't Need "Agile"!
 
-Typically in 
+Often a sentiment found typically in 
 
-* regulated sectors like health, 
+* regulated sectors like health
 
 * government 
 
 * or other slower market
 
-->Using agile methodologies will give you an edge over your competitors
+->Using agile methodologies will give you an edge over your
+  competitors
+
+== Tips For Introduction
+
+Just some quick tips
+
+* Don't be religious about following one method
+
+* Don't buy into the money milking machine
+
+* But get help to find your own way
+
+* Make it part of the company culture
+
+IMPORTANT: A lot of this should be common sense.
 
 
 == Tools Beyond Development 
 
-You will need these to some extent and they do affect development::
+You will need these to some extent and they do affect development.
 
 * Customer Relationship Management 
 
@@ -318,7 +342,7 @@ You will need these to some extent and they do affect development::
 * User interaction tools like forums, mailing lists, support systems,
   issue tracker
 
-* Bookkeeping - order management, in app payments integration
+* Bookkeeping, Inventory,  - order management, in app payments integration
 
 TIP: You might have to integrate with or use them, but we will not
 focus on these.
@@ -329,17 +353,21 @@ Directly used by development
 
 * Issue tracker
  
-** for internal and customer usage
+** for internal use
+
+** and potentially customer usage
 
 * Version control system
 
 ** distributed or centralized
 
-IMPORTANT: Imho these are a *must have*!  
+** maybe some of your components are open source
+
+IMPORTANT: Imho these are a *must have*!  Do we need to discuss why?
 
 == Development Tools You Might Want
 
-For you development you might want
+For your development you might want
 
 * Build system
 
@@ -359,7 +387,7 @@ For you development you might want
 
 * Repository Manager
 
-** store all your components used
+** store all your internal and external components 
 
 ** provide build performance and stability
 
@@ -381,7 +409,11 @@ Get something off the shelf or write your own?
 
 * Maybe write some glue code for integrating different systems
 
+
+
 * Focus on your business, not your tools!
+
+
 
 == Tooling Infrastructure
 
