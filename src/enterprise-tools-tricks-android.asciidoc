@@ -188,7 +188,7 @@ And now...
 
 * multiple external libraries (components) 
 
-* multiple internal compornents used
+* multiple internal components used
 
 * components used across server backend and mobile app
 
@@ -201,7 +201,7 @@ And now...
 
 == Complex App Development - Building
 
-* Eclipse, Intellij and others used by developers
+* Eclipse, IntelliJ and others used by developers
 
 * Command line build becomes important
 
@@ -241,7 +241,7 @@ With all these complexities..
 
 *How can you manage all that?*
 
-* formalization and standarization of procedures
+* formalization and standardization of procedures
 
 * tooling
 
@@ -258,7 +258,7 @@ With all these complexities..
 
 * large difference between code style and patterns across code base
 
-* fixing things right in prodcution 
+* fixing things right in production 
 
 -> These things do not fly anymore --  the stakes are too high
 
@@ -485,7 +485,7 @@ TIP: Most systems are available as SaaS, which can considerably reduce maintenan
 
 == Version Control Systems
 
-Keep track of every change of the commited text
+Keep track of every change of the committed text
 
 * can be source code
 
@@ -498,7 +498,7 @@ you can run a DCS in a centralized manner..
 
 * http://git-scm.com/[Git], http://mercurial.selenic.com/[Mercurial Hg], http://bazaar.canonical.com/en/[Bazaar]...
 
-* http://subversion.apache.org/[Subversion], http://cvs.nongnu.org/[CVS], http://www.perforce.com/[Perforce], Accurev...
+* http://subversion.apache.org/[Subversion], http://cvs.nongnu.org/[CVS], http://www.perforce.com/[Perforce],...
 
 Many more open source and proprietary ones are out there.
 
@@ -507,7 +507,7 @@ TIP: Imho... just use git
 
 == Code Review System
 
-A platform to discuss code changes, evolved from patchsets on mailing
+A platform to discuss code changes, evolved from patch sets on mailing
 lists. 
 
 * https://code.google.com/p/gerrit/[Gerrit]
@@ -606,7 +606,7 @@ TIP: Often components are also called *dependencies* or *artifacts*.
 
 Stick it into libs
 
-Add it manually to the classpath in Eclipse
+Add it manually to the class-path in Eclipse
 
 Track changes as large binary file changes in your VCS
 
@@ -866,7 +866,7 @@ image::images/nexus-tool-suite-integration.png[scale=100]
 
 * Google does not provide components in any repository!
 
-== Component Lifecycle Managment
+== Component Lifecycle Management
 
 Your app includes all the components so you are responsible for
 
@@ -906,6 +906,8 @@ Your mileage may vary...
 * https://sites.google.com/site/gson/[gson]
 
 * http://jackson.codehaus.org/[Jackson]
+
+* tons more
 
 
 TIP: Sometimes you can tricks things into working with shading code
