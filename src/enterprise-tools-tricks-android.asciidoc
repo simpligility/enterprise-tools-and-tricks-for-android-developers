@@ -2,7 +2,7 @@
 :author:    Manfred Moser, simpligility technologies inc.
 :backend:   slidy
 :max-width: 45em
-:data-uri:
+:data-uri: https://github.com/simpligility/enterprise-tools-and-tricks-for-android-developers
 :icons:
 :toc!:
 :slidetitleindentcar: 
