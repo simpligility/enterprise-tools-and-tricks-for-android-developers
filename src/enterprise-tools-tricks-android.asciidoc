@@ -2,12 +2,11 @@
 :author:    Manfred Moser, simpligility technologies inc.
 :backend:   slidy
 :max-width: 45em
-:data-uri: https://github.com/simpligility/enterprise-tools-and-tricks-for-android-developers
+:data-uri: 
 :icons:
 :toc!:
 :slidetitleindentcar: 
-:copyright: 2013, simpligility technologies inc., CreativeCommons Attribution-Noncommercial-No Derivative Works 3.0(http://creativecommons.org/licenses/by-nc-nd/3.0/us)
-
+:copyright: 2013, simpligility technologies inc., CreativeCommons Attribution-ShareAlike 3.0 Unported(http://creativecommons.org/licenses/by-sa/3.0/)
 
 == About Manfred Moser
 
@@ -25,7 +24,18 @@
 
 * Presenter at various conferences AnDevCon, OSCON, JUC, ... 
 
-* Founder of http://www.mosabuam.com/vijug/blog/[VIJUG] and https://plus.google.com/112826376355061333205/posts[GDG Victoria BC]
+* Founder of http://www.mosabuam.com/vijug/blog/[VIJUG] and
+  https://plus.google.com/112826376355061333205/posts[GDG Victoria BC]
+
+== Slides and Source
+
+Source and slides::
+
+https://github.com/simpligility/enterprise-tools-and-tricks-for-android-developers
+
+Slides only::
+
+http://www.simpligility.com/document/enterprise-tools-tricks-android.html
 
 == Objectives
 
@@ -604,25 +614,29 @@ TIP: Often components are also called *dependencies* or *artifacts*.
 
 == Legacy Approach With Eclipse/Ant
 
-Stick it into libs
+* Stick it into libs
 
-Add it manually to the class-path in Eclipse
+* Add it manually to the class-path in Eclipse
 
-Track changes as large binary file changes in your VCS
+* Track changes as large binary file changes in your VCS
+
+* Rinse and repeat for all transtive dependencies
+
+* Do it again and again for changes
 
 IMPORTANT: with rapidly changing binaries and numbers going up, this
 does *not* scale
 
 == Declarative Dependency Management
 
-Introduced by *Apache Maven* into the JVM world.
+* introduced by *Apache Maven* into the JVM world.
 
-Now also used by Apache Ant with *Apache Ivy* and importantly *Gradle*.
+* now also used by Apache Ant with *Apache Ivy* and importantly *Gradle*.
 
 -> Instead of binary files in VCS you merely reference a unique
    identifier to a component in a build file
 
-Components are stored in *repositories*.
+IMPORTANT: Components are stored in *repositories*.
 
 == Identifying a Component - Coordinates
 
@@ -698,12 +712,9 @@ Classifiers javadoc and sources are appended to file name:
     camel-core-3.4.1-sources.jar
 ----
 
-TIP: Other repository formats use a different structure, but the Maven
-structure is understood and used by many tools.
-
 == Central Repository
 
-aka MavenCentral
+* aka Maven Central or just Central
 
 * available at http://search.maven.org
 
@@ -720,8 +731,8 @@ aka MavenCentral
 Referencing a jar file::
 
 
-Apache Maven pom.xml
-
+* Apache Maven pom.xml
++
 ----
 <dependencies>
   <dependency> 
@@ -732,8 +743,8 @@ Apache Maven pom.xml
 </dependencies>
 ----
 
-Gradle build.gradle (long and short form below)
-
+* Gradle build.gradle (long and short form below)
++
 ----
 dependencies {
   compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', 
@@ -742,7 +753,8 @@ dependencies {
 }
 ----
 
-TIP: Check out the Dependency Information section on the Central Repository
+TIP: Check out the Dependency Information section on the Central
+Repository - demo!
 
 
 == Referencing a Component - Part 2
@@ -802,6 +814,8 @@ runtime group: 'org.groovy', name: 'groovy', version: '2.0.5', ext: 'jar'
 
 ** experimental!
 
+TIP: Android library projects are manual in terms of setup and
+deprecated... 
 
 == Adding Repositories
 
@@ -966,11 +980,6 @@ More and more becoming mainstream and mature
 
 * https://github.com/rtyley/android-screenshot-lib[Android Screenshot
   Lib] e.g. integrated in the https://code.google.com/p/maven-android-plugin/[Android Maven Plugin]
-
-== More Links
-
-
-
 
 == Whats Next? 
 
