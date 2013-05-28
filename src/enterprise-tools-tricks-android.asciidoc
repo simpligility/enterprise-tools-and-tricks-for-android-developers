@@ -29,50 +29,15 @@
 
 == Objectives
 
-* What tools to look at when growing
+* What to look out for when growing
 
-* Find out about some great libraries and tools
+* Overview of categories of tools and their use 
 
-* 
+* Find out about some great libraries
 
+TIP: Please interrupt me and ask questions - this should be an open conversation!
 
-Have you been developing Android applications for a while? On your
-own? And there is just too much to do? Congratulations! But what next?
-Android application development is growing up, and larger and larger
-teams are working on multiple mobile applications. And these
-applications have to tie back into one or many server-side enterprise
-applications. The complexity of a typical Android application requires
-the use of a number of external libraries for interoperating with Web
-services and other systems; abstracting the Android API across
-platform versions; improving the performance or maintainability of the
-source code; and many more aspects. Learn about a number of great
-libraries available as open source, where to get them, and how to
-start including them into your application easily.
-
-As a next step, we will learn about repository management. Learn how
-to enjoy great build performance and stability, and how to gain access
-to an easy mechanism to distribute your own libraries and components
-internally as well as to partners and clients. Once you are using a
-repository manager, you will be able to easily distribute your
-applications across teams and potentially implement a multi-stage
-release process with notifications and rollbacks, if necessary.
-
-Using all these libraries brings tremendous benefits to you. It
-however also means that you are responsible for license compliance,
-and we will show you some accepted practices for ensuring that your
-applications comply. Unfortunately, these components can be affected
-by security issues as well. We will examine the ideas of Component
-Lifecycle Management, and check out some of the tools available to
-help you take control over potential security and license issues.
-
-Once your development efforts scale even further, you will need to
-examine your version-control system usage. We will look at a few
-practices for using branches effectively and ensuring that development
-efforts on multiple features integrate well. Adding a continuous
-integration server into your development infrastructure will allow you
-tie everything together.
-
-== What is Our Scenario? 
+== What Is Our Scenario? 
 
 You are somewhere along the path from 
 
@@ -144,7 +109,7 @@ Growing a *software development team* means things like
 ** so more details coming later  image:images/emoticons/wink.png[scale=100]
 
 
-== Big Picture Things to Consider
+== Big Picture Things To Consider
 
 There are a lot of other aspects.. 
 
@@ -154,7 +119,7 @@ There are a lot of other aspects..
 
 * which makes it harder to change
 
-== Big Picture Things to Consider - Distributed Company
+== Big Picture Things To Consider - Distributed Company
 
 Are you running a distributed company? 
 
@@ -168,7 +133,7 @@ Are you running a distributed company?
 * virtual infrastructure
 
 
-== Big Picture Things to Consider - Core Competency
+== Big Picture Things To Consider - Core Competency
 
 What is your core competency?
 
@@ -185,7 +150,7 @@ TIP: Choose wisely what you take care of yourself, and what you pay
 others to do for you!
 
 
-== But Thats Enough High Level
+== But That Is Enough High Level Talk
 
 Let's move on to
 
@@ -281,9 +246,9 @@ With all these complexities..
 * tooling
 
 
-== Formalization of Procedures - The Problem
+== Formalization Of Procedures - The Problem
 
-* cowboy coding
+* http://en.wikipedia.org/wiki/Cowboy_coding[cowboy coding]
 
 * rampant choice and therefore complexity
 
@@ -297,7 +262,7 @@ With all these complexities..
 
 -> These things do not fly anymore --  the stakes are too high
 
-== Formalization of Procedures - The Benefits
+== Formalization Of Procedures - The Benefits
 
 * avoid communication issues and other friction
 
@@ -312,7 +277,7 @@ With all these complexities..
 * avoid huge costs of failure
 
 
-== Formalization of Procedures - Agile 
+== Formalization Of Procedures - Agile 
 
 * IT is very fast paced.
 
@@ -437,11 +402,7 @@ Get something off the shelf or write your own?
 
 * Maybe write some glue code for integrating different systems
 
-
-
 * Focus on your business, not your tools!
-
-
 
 == Tooling Infrastructure
 
@@ -471,67 +432,503 @@ Where and who to run it all?
 
 ** Do it yourself
 
-
-== Before We Look At The Tools In Detail
-
-let's look at the apps and components 
-
-add slides about 
-
-Eclipse build
-
-Ant
-
-Maven
-
-Gradle
-
-APKLIB
-
-AAR
-
-Android Specific Examples
-
-RoboGuice
-
-ActionBarSherlock
-
-Spoon
-
-Otto
-
-GreenDroid
-
-Appium 
-
-Robotium
-
-...
-
 == Issue Tracking
 
+aka bug tracker, support ticket, ...
+
+Examples are
+
+* http://www.atlassian.com/software/jira[Atlassian JIRA]
+
+* http://www.bugzilla.org/[Bugzilla]
+
+* http://www.jetbrains.com/youtrack/[JetBrains YouTrack]
+
+* http://bestpractical.com/rt/[Request Tracker]
+
+* *Many* others e.g. see
+   http://en.wikipedia.org/wiki/Comparison_of_issue_tracking_systems[the
+   list on wikipedia]
+
+TIP: Most systems are available as SaaS, which can considerably reduce maintenance.
+
 == Version Control Systems
+
+Keep track of every change of the commited text
+
+* can be source code
+
+* or other text based files (books, laws, xml .. whatever)
+
+* not so good for binary
+
+Two major groups are centralized and distributed systems - although
+you can run a DCS in a centralized manner.. 
+
+* http://git-scm.com/[Git], http://mercurial.selenic.com/[Mercurial Hg], http://bazaar.canonical.com/en/[Bazaar]...
+
+* http://subversion.apache.org/[Subversion], http://cvs.nongnu.org/[CVS], http://www.perforce.com/[Perforce], Accurev...
+
+Many more open source and proprietary ones are out there.
+
+TIP: Imho... just use git 
 
 
 == Code Review System
 
+A platform to discuss code changes, evolved from patchsets on mailing
+lists. 
+
+* https://code.google.com/p/gerrit/[Gerrit]
+
+* http://www.reviewboard.org/[Review Board]
+
+* http://www.atlassian.com/software/crucible/overview[Atlassian Crucible]
+
+* http://smartbear.com/products/software-development/code-review[SmartBear Collaborator]
+
+* Wikipedia has a
+  http://en.wikipedia.org/wiki/List_of_tools_for_code_review[list]
+
+TIP: While pair programming is useful, a review system allows remote
+collaboration and time-shifted reviews. Very handy!
+
+== Development Saas
+
+Common a collection of
+
+* issue tracker
+
+* version control system 
+
+* code review system 
+
+* other additions like wiki, forum, mailing list, notification
+  services...
+
+Often free for open source, sometimes with commercial extension
+
+* http://sourceforge.net/[SourceForge]
+
+* https://code.google.com/[GoogleCode]
+
+* https://launchpad.net/[Launchpad]
+
+* https://bitbucket.org/[Bitbucket]
+
+* https://github.com/[GitHub]
+
+TIP: There are commercial only solutions like MS TFS and others as well.
+
 == Continuous Integration
 
+Every commit to you VCS 
 
-== Repository Management
+triggers a build
+
+integrating changes from all developers
+
+executing compilation, test execution...
+
+* http://www.hudson-ci.org[Eclipse Hudson]
+
+* http://www.jenkins-ci.org[Jenkins]
+
+* https://travis-ci.org[Travis]
+
+* and many more
+
+TIP: Dedicated introduction to CI on Friday morning available on https://github.com/simpligility/introduction-to-continuous-integration-for-android-developers[github]
+
+== Managing Dependencies And Libraries
+
+With the complex application structure binary components in the form
+of dependencies become critical for 
+
+* reducing build times 
+
+* breaking up the complexity
+
+* allowing distributed development 
+
+** in terms of teams working on components 
+
+** and geographically
+
+* being able to use external components easily
+
+== So What Is A Component
+
+Anything app needs in order
+
+* build it
+
+* run the tests
+
+* produce the distributable apk 
+
+** with some components needed at runtime
+
+TIP: Often components are also called *dependencies* or *artifacts*.
+
+== Legacy Approach With Eclipse/Ant
+
+Stick it into libs
+
+Add it manually to the classpath in Eclipse
+
+Track changes as large binary file changes in your VCS
+
+IMPORTANT: with rapidly changing binaries and numbers going up, this
+does *not* scale
+
+== Declarative Dependency Management
+
+Introduced by *Apache Maven* into the JVM world.
+
+Now also used by Apache Ant with *Apache Ivy* and importantly *Gradle*.
+
+-> Instead of binary files in VCS you merely reference a unique
+   identifier to a component in a build file
+
+Components are stored in *repositories*.
+
+== Identifying a Component - Coordinates
+
+Components are *uniquely* defined by their coordinates.
+
+* establish a global name-space for artifacts
+
+* similar to package names in Java
+
+* *g* roupId, *a* rtifactId, *v* ersion - GAV
+
+* optionally classifier and packaging
+
+TIP: Analogy -> Longitude and latitude establishes a geographical
+namespace or DNS for web sites.
+
+
+== Maven Repository Format
+
+Standard introduced by Maven but understood by build systems like
+
+* Apache Maven
+
+* Gradle
+
+* Apache Ivy
+
+* Grails
+
+* Gant
+
+* sbt
+
+* Leiningen
+
+TIP: And once you understand the structure everything is also easily
+available via http.
+
+
+== Maven Repository Format 
+
+Uses the coordinates. Coordinates map to specific
+locations in a Maven repository.
+
+----
+<dependency>
+  <groupId>org.apache.camel</groupId>
+  <artifactId>camel-core</artifactId>
+  <version>3.4.1</version>
+</dependency>
+----
+
+Maps to:
+
+----
+org/apache/camel/
+                 camel-core/
+                            3.4.1/
+    camel-core-3.4.1.pom
+    camel-core-3.4.1.jar
+----
+
+File names are created using
+
+----
+artifactId-version-classifier.packaging
+----
+
+
+Classifiers javadoc and sources are appended to file name: 
+----
+    camel-core-3.4.1-javadoc.jar
+    camel-core-3.4.1-sources.jar
+----
+
+TIP: Other repository formats use a different structure, but the Maven
+structure is understood and used by many tools.
+
+== Central Repository
+
+aka MavenCentral
+
+* available at http://search.maven.org
+
+* largest repository of Java components and beyond
+
+* introduced with Apache Maven > 10yrs ago
+
+* default repository in Apache Maven and other build tools
+
+* can be added easily if not default (e.g. in gradle) 
+
+== Referencing A Component - Part 1
+
+Referencing a jar file::
+
+
+Apache Maven pom.xml
+
+----
+<dependencies>
+  <dependency> 
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-core</artifactId>
+    <version>2.2.2</version>
+  </dependency>
+</dependencies>
+----
+
+Gradle build.gradle (long and short form below)
+
+----
+dependencies {
+  compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.2.2'
+  compile 'com.fasterxml.jackson.core:jackson-core:2.2.2'
+}
+----
+
+TIP: Check out the Dependency Information section on the Central Repository
+
+
+== Referencing a Component - Part 2
+
+*Scope* defines when a component is needed (
+
+----
+provided group: 'org.gradle.test.classifiers', name: 'service', version: '1.0', classifier: 'jdk14'
+----
+
+Type/Packaging::
+
+Maven example
+----
+<dependency>
+  <groupId>com.viewpagerindicator</groupId>
+  <artifactId>library</artifactId>
+  <version>2.4.1</version>
+  <type>apklib</type>
+</dependency>
+----
+
+Gradle example
+----
+runtime group: 'org.groovy', name: 'groovy', version: '2.0.5', ext: 'jar'
+----
+
+
+== Jar, Apklib and Aar
+
+* jar - java archive
+
+** only java classes
+
+** no android resources
+
+* apklib 
+
+** introduced by the Android Maven Plugin
+
+** android resources
+
+** transitive dependencies
+
+** nested native components 
+
+** stable
+
+* aar - Android archive
+
+** successor of apklib
+
+** introduced by Gradle build system
+
+** not yet supported in Android Maven Plugin
+
+** experimental!
+
+
+== Adding Repositories
+
+Apache Maven::
+
+global per user in settings.xml 
+
+per project in pom.xml (discouraged!)
+
+Gradle:: 
+
+can only add on per project basis
++
+----
+repositories {
+    mavenCentral()
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+    }
+}
+----
+
+TIP: Ideally just reference one repository manager in your
+organization, and add more references there - demo time!
+
+== What is a Repository?
+
+* Organized storage and access container for artifacts
+
+* Uses artifact coordinates for structure
+
+-> A Repository Manager helps with administration and usage
+
+== Repository Manager Tasks
+
+* Proxy and managing access to public repositories
+
+* Storing components that are not in public repositories
+
+* Managing releases and snapshots
+
+* Controlling available and allowed components
+
+-> Facilitate internal collaboration across components and teams
 
 == Repository Manager as Center Hub
 
 image::images/nexus-tool-suite-integration.png[scale=100]
 
+* http://www.sonatype.org/nexus/[Sonatype Nexus]
 
+* http://archiva.apache.org/index.cgi[Apache Archiva]
+
+* http://www.jfrog.com/home/v_artifactory_opensource_overview[JFrog Artifactory]
+
+
+== Maven Android SDK Deployer
+
+* allows you to publish Android SDK components to repository manager
+
+* https://github.com/mosabua/maven-android-sdk-deployer
+
+* necessary since Google does not provide components in any repository
 
 == Component Lifecycle Managment
 
 
+Sonatype CLM
+
+Using all these libraries brings tremendous benefits to you. It
+however also means that you are responsible for license compliance,
+and we will show you some accepted practices for ensuring that your
+applications comply. Unfortunately, these components can be affected
+by security issues as well. We will examine the ideas of Component
+Lifecycle Management, and check out some of the tools available to
+help you take control over potential security and license issues.
 
 
 
+== Looking for Components
+
+Problem of discoverability .. just like for apps.
+
+A lot of it is word of mouth, but check out
+
+
+* github
+
+* google code
+
+* source forge
+
+* ask on G+, twitter and stackoverflow
+
+== Plain Java Components Suitable for Android
+
+Your mileage may vary...
+
+* https://sites.google.com/site/gson/[gson]
+
+* http://jackson.codehaus.org/[Jackson]
+
+
+
+TIP: Sometimes you can tricks things into working with shading code
+into a different package. E.g. https://github.com/rtyley/spongycastle[spongycastle]
+
+== Android Frameworks
+
+Lots of different ones available, with varying scope
+
+* https://github.com/roboguice/roboguice[RoboGuice]
+
+* https://github.com/mttkay/ignition[Ignition]
+
+* http://androidannotations.org/[Android Annotations]
+
+TIP: Frameworks for gaming a whole other topic...
+
+== Specific Tools
+
+* http://square.github.io/dagger/[Dagger] -- Dependency Injection Framework
+
+* http://square.github.io/otto/[Otto] -- EventBus
+
+* https://github.com/square/okhttp[OkHttp] -- HTTP and SPDY client
+
+
+== Android UI Widgets and Tools
+
+* https://github.com/JakeWharton/ActionBarSherlock[ActionBarSherlock] 
+
+* https://github.com/JakeWharton/Android-ViewPagerIndicator[View Pager
+  Indicator]
+
+* http://greendroid.cyrilmottier.com/[GreenDroid]
+
+* https://github.com/github/gauges-android[Gauges Android]
+
+* https://code.google.com/p/achartengine/[achartengine]
+
+TIP: Ask around on G+ and search around a bit, there is *lots* out there.
+
+
+== Testing Tools
+
+More and more becoming mainstream and mature
+
+* https://code.google.com/p/robotium/[Robotium]
+
+* https://github.com/robolectric/robolectric/[Robolectric]
+
+* http://square.github.io/fest-android/[FEST Android]
+
+* https://github.com/square/spoon[Spoon]
+
+* https://github.com/appium/appium[Appium]
+
+* https://github.com/rtyley/android-screenshot-lib[Android Screenshot
+  Lib] e.g. integrated in the https://code.google.com/p/maven-android-plugin/[Android Maven Plugin]
 
 == More Links
 
@@ -540,16 +937,18 @@ image::images/nexus-tool-suite-integration.png[scale=100]
 
 == Whats Next? 
 
-* Fireside chat about growing up
+* Fireside chat about Android development growing up
 
 ** Wednesday, May 29, 7:30-9:30 PM
 
-** With Robert Green, Jake Wharton, Mike Wolfson and others
+** Hosted with Robert Green and a panel full of Android pros
 
 ** Ask questions and get tips and tricks from the pros!
 
 * Introduction to Continuous Integration Server Usage Focusing on
   Android Development  
 
-** ./Friday, May 31, 8:30-9:45 AM
+** Friday, May 31, 8:30-9:45 AM
+
+== Questions and Answers
 
