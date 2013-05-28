@@ -432,6 +432,37 @@ Where and who to run it all?
 
 ** Do it yourself
 
+== Build System
+
+Command line build is necessary for automation!
+
+* Ant 
+
+** Android integration from Google is deprecated!
+
+* make
+
+** used in AOSP - do not use this yourself if you can avoid it
+
+* http://www.gradle.org/[Gradle]
+
+** http://tools.android.com/tech-docs/new-build-system[new Android plugin] for Gradle
+
+** managed by Google
+
+* http://maven.apache.org/[Apache Maven]
+
+** https://code.google.com/p/maven-android-plugin/[Android Maven Plugin]
+
+** very powerful and mature
+
+** open community
+
+* others like http://www.scala-sbt.org/[sbt] are exotic but can be used too... 
+
+TIP: As project manager for the Android Maven Plugin you know what I
+would recommend...
+
 == Issue Tracking
 
 aka bug tracker, support ticket, ...
@@ -705,7 +736,8 @@ Gradle build.gradle (long and short form below)
 
 ----
 dependencies {
-  compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.2.2'
+  compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', 
+                  version: '2.2.2'
   compile 'com.fasterxml.jackson.core:jackson-core:2.2.2'
 }
 ----
@@ -718,7 +750,8 @@ TIP: Check out the Dependency Information section on the Central Repository
 *Scope* defines when a component is needed (
 
 ----
-provided group: 'org.gradle.test.classifiers', name: 'service', version: '1.0', classifier: 'jdk14'
+provided group: 'org.gradle.test.classifiers', name: 'service', 
+                version: '1.0', classifier: 'jdk14'
 ----
 
 Type/Packaging::
@@ -774,19 +807,19 @@ runtime group: 'org.groovy', name: 'groovy', version: '2.0.5', ext: 'jar'
 
 Apache Maven::
 
-global per user in settings.xml 
+* global per user in settings.xml 
 
-per project in pom.xml (discouraged!)
+* per project in pom.xml (discouraged!)
 
 Gradle:: 
 
-can only add on per project basis
+* can only add on per project basis
 +
 ----
 repositories {
     mavenCentral()
     maven {
-        url "https://oss.sonatype.org/content/repositories/snapshots"
+        url "https://repository.mycompnay.com/content/groups/public"
     }
 }
 ----
@@ -804,13 +837,13 @@ organization, and add more references there - demo time!
 
 == Repository Manager Tasks
 
-* Proxy and managing access to public repositories
+* proxy and managing access to public repositories
 
-* Storing components that are not in public repositories
+* storing components that are not in public repositories
 
-* Managing releases and snapshots
+* managing releases and snapshots
 
-* Controlling available and allowed components
+* controlling available and allowed components
 
 -> Facilitate internal collaboration across components and teams
 
@@ -827,33 +860,36 @@ image::images/nexus-tool-suite-integration.png[scale=100]
 
 == Maven Android SDK Deployer
 
-* allows you to publish Android SDK components to repository manager
+* publish Android SDK components to repository manager
 
 * https://github.com/mosabua/maven-android-sdk-deployer
 
-* necessary since Google does not provide components in any repository
+* Google does not provide components in any repository!
 
 == Component Lifecycle Managment
 
+Your app includes all the components so you are responsible for
 
-Sonatype CLM
+* license usage implications
 
-Using all these libraries brings tremendous benefits to you. It
-however also means that you are responsible for license compliance,
-and we will show you some accepted practices for ensuring that your
-applications comply. Unfortunately, these components can be affected
-by security issues as well. We will examine the ideas of Component
-Lifecycle Management, and check out some of the tools available to
-help you take control over potential security and license issues.
+* security issues
 
+-> http://www.sonatype.com/clm/overview[Sonatype CLM]
 
+Allows you to control and work with components and inspect their
+security and license characteristics in 
+
+* CI server
+
+* IDE
+
+* Repository Manager
 
 == Looking for Components
 
 Problem of discoverability .. just like for apps.
 
 A lot of it is word of mouth, but check out
-
 
 * github
 
@@ -870,7 +906,6 @@ Your mileage may vary...
 * https://sites.google.com/site/gson/[gson]
 
 * http://jackson.codehaus.org/[Jackson]
-
 
 
 TIP: Sometimes you can tricks things into working with shading code
