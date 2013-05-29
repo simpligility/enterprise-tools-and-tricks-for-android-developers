@@ -6903,7 +6903,8 @@ Repository - demo!</td>
 <div class="sect1 slide">
 <h1 id="_referencing_a_component_part_2">Referencing a Component - Part 2</h1>
 <div class="sectionbody" style="max-width:45em">
-<div class="paragraph"><p><strong>Scope</strong> defines when a component is needed (</p></div>
+<div class="paragraph"><p><strong>Scope</strong> defines when a component is needed - e.g. provided by the
+ phone, compile for components that have to be included in the apk..</p></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>provided group: 'org.gradle.test.classifiers', name: 'service',
@@ -6915,6 +6916,11 @@ Type/Packaging
 </dt>
 <dd>
 <ul class="">
+<li>
+<span>
+default is jar, but can be all sorts e.g. apklib, aar, so, zip,&#8230;
+</span>
+</li>
 <li>
 <span>
 Maven example

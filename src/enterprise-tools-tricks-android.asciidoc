@@ -785,7 +785,8 @@ Repository - demo!
 
 == Referencing a Component - Part 2
 
-*Scope* defines when a component is needed (
+*Scope* defines when a component is needed - e.g. provided by the
+ phone, compile for components that have to be included in the apk.. 
 
 ----
 provided group: 'org.gradle.test.classifiers', name: 'service', 
@@ -793,6 +794,8 @@ provided group: 'org.gradle.test.classifiers', name: 'service',
 ----
 
 Type/Packaging::
+
+* default is jar, but can be all sorts e.g. apklib, aar, so, zip,...
 
 * Maven example
 +
@@ -810,6 +813,8 @@ Type/Packaging::
 ----
 runtime group: 'org.groovy', name: 'groovy', version: '2.0.5', ext: 'jar'
 ----
+
+
 
 
 == Jar, Apklib and Aar 
