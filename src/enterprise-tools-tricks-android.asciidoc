@@ -43,6 +43,8 @@ http://www.simpligility.com/document/enterprise-tools-tricks-android.html
 
 * Overview of categories of tools and their use 
 
+* Component usage and repository management
+
 * Find out about some great libraries
 
 TIP: Please interrupt me and ask questions - this should be an open conversation!
@@ -121,13 +123,15 @@ Growing a *software development team* means things like
 
 == Big Picture Things To Consider
 
-There are a lot of other aspects.. 
+There are a lot of other aspects with the following
 
-* I found the following to be often overlooked or merely evolving 
+* often overlooked
 
-* rather than being a conscious decision 
+* not a conscious decision 
 
-* which makes it harder to change
+* very hard to change later
+
+TIP: Try to decide early one and constantly re-evaluate.
 
 == Big Picture Things To Consider - Distributed Company
 
@@ -140,8 +144,9 @@ Are you running a distributed company?
 
 * wider choice of people - the whole world potentially
 
-* virtual infrastructure
+* virtual infrastructure important and more necessary from the start
 
+* makes some things easier, and some harder
 
 == Big Picture Things To Consider - Core Competency
 
@@ -298,7 +303,7 @@ With all these complexities..
 ->  You have to use some sort of agile process
 
 TIP: Try for some http://www.simpligility.com[simpligility] -
-simplicity and agility combined l  image:images/emoticons/wink.png[scale=100]
+simplicity and agility combined   image:images/emoticons/wink.png[scale=100]
 
 == We Don't Need "Agile"!
 
@@ -310,10 +315,10 @@ Often a sentiment found typically in
 
 * or other slower market
 
-->Using agile methodologies will give you an edge over your
+-> Using agile methodologies will give you an edge over your
   competitors
 
-== Tips For Introduction
+== Tips For Introduction of Agile
 
 Just some quick tips
 
@@ -442,37 +447,6 @@ Where and who to run it all?
 
 ** Do it yourself
 
-== Build System
-
-Command line build is necessary for automation!
-
-* Ant 
-
-** Android integration from Google is deprecated!
-
-* make
-
-** used in AOSP - do not use this yourself if you can avoid it
-
-* http://www.gradle.org/[Gradle]
-
-** http://tools.android.com/tech-docs/new-build-system[new Android plugin] for Gradle
-
-** managed by Google
-
-* http://maven.apache.org/[Apache Maven]
-
-** https://code.google.com/p/maven-android-plugin/[Android Maven Plugin]
-
-** very powerful and mature
-
-** open community
-
-* others like http://www.scala-sbt.org/[sbt] are exotic but can be used too... 
-
-TIP: As project manager for the Android Maven Plugin you know what I
-would recommend...
-
 == Issue Tracking
 
 aka bug tracker, support ticket, ...
@@ -561,15 +535,60 @@ Often free for open source, sometimes with commercial extension
 
 TIP: There are commercial only solutions like MS TFS and others as well.
 
+
+== Build System
+
+Command line build is necessary for automation!
+
+* Ant 
+
+** Android integration from Google is deprecated!
+
+* make
+
+** used in AOSP - do not use this yourself if you can avoid it
+
+* http://www.gradle.org/[Gradle]
+
+** http://tools.android.com/tech-docs/new-build-system[new Android plugin] for Gradle
+
+** managed by Google
+
+* http://maven.apache.org/[Apache Maven]
+
+** https://code.google.com/p/maven-android-plugin/[Android Maven Plugin]
+
+** very powerful and mature
+
+** open community
+
+* others like http://www.scala-sbt.org/[sbt] are exotic but can be used too... 
+
+TIP: As project manager for the Android Maven Plugin you know what I
+would recommend...
+
+== Quality Metrics and Analysis Tools
+
+* coding standard
+
+* license header
+
+* static analysis 
+
+* and many more
+
+TIP: http://www.sonarsource.org/[Sonar] exposes a lot and stores the analysis results over time. 
+
+
 == Continuous Integration
 
-Every commit to you VCS 
+* every commit to version control triggers a build
 
-triggers a build
+* integrates changes from all developers
 
-integrating changes from all developers
+* executing compilation, test execution, analysis...
 
-executing compilation, test execution...
+Example platforms:: 
 
 * http://www.hudson-ci.org[Eclipse Hudson]
 
@@ -583,8 +602,7 @@ TIP: Dedicated introduction to CI on Friday morning available on https://github.
 
 == Managing Dependencies And Libraries
 
-With the complex application structure binary components in the form
-of dependencies become critical for 
+Complex application structure -> binary *components* become critical
 
 * reducing build times 
 
@@ -598,7 +616,7 @@ of dependencies become critical for
 
 * being able to use external components easily
 
-== So What Is A Component
+== So What Is A Component?
 
 Anything app needs in order
 
@@ -610,6 +628,8 @@ Anything app needs in order
 
 ** with some components needed at runtime
 
+in the form of jar files and others.
+
 TIP: Often components are also called *dependencies* or *artifacts*.
 
 == Legacy Approach With Eclipse/Ant
@@ -620,7 +640,7 @@ TIP: Often components are also called *dependencies* or *artifacts*.
 
 * Track changes as large binary file changes in your VCS
 
-* Rinse and repeat for all transtive dependencies
+* Rinse and repeat for all transitive dependencies
 
 * Do it again and again for changes
 
@@ -675,8 +695,7 @@ Standard introduced by Maven but understood by build systems like
 TIP: And once you understand the structure everything is also easily
 available via http.
 
-
-== Maven Repository Format 
+== Maven Repository Format - Directory Structure
 
 Uses the coordinates. Coordinates map to specific
 locations in a Maven repository.
@@ -698,6 +717,8 @@ org/apache/camel/
     camel-core-3.4.1.pom
     camel-core-3.4.1.jar
 ----
+
+== Maven Repository Format - File Naming 
 
 File names are created using
 
@@ -725,6 +746,11 @@ Classifiers javadoc and sources are appended to file name:
 * default repository in Apache Maven and other build tools
 
 * can be added easily if not default (e.g. in gradle) 
+
+* https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide[deploy
+  your own components] to Central Repository via Nexus running https://oss.sonatype.org/[OSSRH]
+
+TIP: Let's check it out a bit
 
 == Referencing A Component - Part 1
 
@@ -768,7 +794,8 @@ provided group: 'org.gradle.test.classifiers', name: 'service',
 
 Type/Packaging::
 
-Maven example
+* Maven example
++
 ----
 <dependency>
   <groupId>com.viewpagerindicator</groupId>
@@ -778,13 +805,16 @@ Maven example
 </dependency>
 ----
 
-Gradle example
+* Gradle example
++
 ----
 runtime group: 'org.groovy', name: 'groovy', version: '2.0.5', ext: 'jar'
 ----
 
 
-== Jar, Apklib and Aar
+== Jar, Apklib and Aar 
+
+Let's clear up the confusion
 
 * jar - java archive
 
@@ -802,15 +832,21 @@ runtime group: 'org.groovy', name: 'groovy', version: '2.0.5', ext: 'jar'
 
 ** nested native components 
 
+** contains java source
+
 ** stable
 
-* aar - Android archive
+* *aar* - Android archive
 
 ** successor of apklib
 
 ** introduced by Gradle build system
 
 ** not yet supported in Android Maven Plugin
+
+** contains java class files, also lint rules and more planned 
+
+** no native support (yet), 
 
 ** experimental!
 
@@ -843,9 +879,9 @@ organization, and add more references there - demo time!
 
 == What is a Repository?
 
-* Organized storage and access container for artifacts
+* Organized storage and access container for components
 
-* Uses artifact coordinates for structure
+* Uses component coordinates for structure
 
 -> A Repository Manager helps with administration and usage
 
@@ -871,6 +907,8 @@ image::images/nexus-tool-suite-integration.png[scale=100]
 
 * http://www.jfrog.com/home/v_artifactory_opensource_overview[JFrog Artifactory]
 
+TIP: Let's have a look at Nexus.
+
 
 == Maven Android SDK Deployer
 
@@ -879,6 +917,8 @@ image::images/nexus-tool-suite-integration.png[scale=100]
 * https://github.com/mosabua/maven-android-sdk-deployer
 
 * Google does not provide components in any repository!
+
+* includes proprietary libraries like GCM, ...
 
 == Component Lifecycle Management
 
@@ -911,7 +951,11 @@ A lot of it is word of mouth, but check out
 
 * source forge
 
-* ask on G+, twitter and stackoverflow
+* G+
+
+* twitter
+
+* stackoverflow
 
 == Plain Java Components Suitable for Android
 
@@ -937,7 +981,8 @@ Lots of different ones available, with varying scope
 
 * http://androidannotations.org/[Android Annotations]
 
-TIP: Frameworks for gaming a whole other topic...
+TIP: Frameworks for gaming a whole other topic... and the Android
+framework itself has improved a LOT of the years.
 
 == Specific Tools
 
@@ -978,8 +1023,7 @@ More and more becoming mainstream and mature
 
 * https://github.com/appium/appium[Appium]
 
-* https://github.com/rtyley/android-screenshot-lib[Android Screenshot
-  Lib] e.g. integrated in the https://code.google.com/p/maven-android-plugin/[Android Maven Plugin]
+* https://github.com/rtyley/android-screenshot-lib[Android Screenshot Lib] e.g. integrated in the https://code.google.com/p/maven-android-plugin/[Android Maven Plugin]
 
 == Whats Next? 
 
@@ -996,5 +1040,11 @@ More and more becoming mainstream and mature
 
 ** Friday, May 31, 8:30-9:45 AM
 
-== Questions and Answers
+== The End
+
+* Q & A
+
+* Discussion
+
+* Find me at http://www.simpligility.com
 

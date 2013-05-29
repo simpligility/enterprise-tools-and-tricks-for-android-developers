@@ -43,13 +43,16 @@ efforts on multiple features integrate well. Adding a continuous
 integration server into your development infrastructure will allow you
 tie everything together.
 
+=== Slides
 
-=== Tips for using
+Source and slides::
 
-The html file in the root folder is all you need to show the
-presentation.
+https://github.com/simpligility/enterprise-tools-and-tricks-for-android-developers
 
-Just download the repo with git clone or as zip/tar.gz
+Slides only::
+
+http://www.simpligility.com/document/enterprise-tools-tricks-android.html
+
 
 === Modifications
 
